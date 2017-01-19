@@ -11,7 +11,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('layout');
+        $peoples = Peoples::all();
+        return view('agenda', compact('peoples'));
     }
 
     //

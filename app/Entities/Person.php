@@ -16,5 +16,7 @@ class Person extends Model {
 
 	public function Phones() {
 
+		return $this->hasMany(Phones::class);
+
 	} 
 }
