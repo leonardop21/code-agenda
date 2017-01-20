@@ -16,4 +16,8 @@ class Phone extends Model {
 		'sufix'
 
 	];
+
+	public function getNumberAttribute() { // Pega o atributo number, formata e retorna o telefone na view chamando {{ $phone->number }}
+	    return "({$this->ddd}) {$this->prefix}-{$this->sufix}";
+    }
 }

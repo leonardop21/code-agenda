@@ -1,10 +1,21 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-  	Panel heading without title
+	  <h3 class="painel-title">
+		  {{ $person->name }}
+
+		  <span class="pull-right">
+			  <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Editar" ><i class="fa fa-edit"></i></a>
+			  <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar"><i class="fa fa-minus-circle"></i></a>
+		  </span>
+
+	  </h3>
+
   </div>
-  	<h3 class="panel-title">{{ $person->nick_name }}</h3>
+
   <div class="painel-body">
-  	<h3>{{ $person->name }}</h3>
+	<h3>
+		{{ $person->nick_name  }}
+	</h3>
 
   	<table class="table table-hover">
   		@foreach($person->phones as $phone)
@@ -13,10 +24,10 @@
   					{{ $phone->description }}
   				</td>
   				<td>
-  					({{ $phone->ddd }}) {{$phone->prefix}}-{{$phone->sufix}}
+  					{{ $phone->number  }}
   				</td>
   				<td>
-  					<a href="" class="text-danger">
+  					<a href="" class="text-danger" data-toggle="tooltip" data-placement="top" title="Apagar">
   						<i class="fa fa-minus-circle"></i>
   					</a>
   				</td>
