@@ -4,10 +4,10 @@
   </div>
   	<h3 class="panel-title">{{ $person->nick_name }}</h3>
   <div class="painel-body">
-  	<h1>{{ $person->name }}</h1>
+  	<h3>{{ $person->name }}</h3>
 
   	<table class="table table-hover">
-  		@foreach($person->phones as phone)
+  		@foreach($person->phones as $phone)
   			<tr>
   				<td>
   					{{ $phone->description }}
