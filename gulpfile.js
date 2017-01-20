@@ -16,3 +16,5 @@ var elixir = require('laravel-elixir'),
 			
 			.less('app.less'); //Irá ler, minificar os arquivos e salvar na pasta public/assets/app.css
 	});
+
+	
